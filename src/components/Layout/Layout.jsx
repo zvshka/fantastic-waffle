@@ -3,13 +3,13 @@ import Navbar from "../Navbar/Navbar";
 
 function Layout({children}) {
     return (
-        <div className="container mx-auto">
+        <>
             <Navbar/>
-                <main>
-                    {children}
-                </main>
+            <main>
+                {children}
+            </main>
             <Footer/>
-        </div>
+        </>
     )
 }
 
