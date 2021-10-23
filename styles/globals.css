@@ -4,17 +4,45 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.background {
+    background-image: url("../public/background.png");
+}
+
+.spacer {
+    aspect-ratio: 1920/300;
+    width: 100%;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.wave-top {
+    background-image: url("../public/wave-top.svg");
+}
+
+.wave-bottom {
+    background-image: url("../public/wave-bottom.svg");
+}
+
+@media screen and (max-width: 768px) {
+    .background {
+        background: 20% 20% url("../public/background.png") no-repeat;
+    }
+    .spacer {
+        aspect-ratio: 900/600;
+    }
 }

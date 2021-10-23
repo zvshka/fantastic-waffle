@@ -12,30 +12,33 @@ const Navbar = () => {
 
     const [navClosed, toggleNav] = useState(true)
 
-    return <nav className="bg-primary">
+    return <nav className="bg-primary fixed inset-x-0 z-10">
         <div className="max-w-6xl mx-auto px-4">
             <div className="flex justify-between">
 
                 <div className="flex space-x-4">
-                    <div>
-                        <a href="#" className="flex items-center py-5 px-2 text-white hover:text-gray-900">
-                            <span className="text-2xl font-bold">Fantastic Waffle</span>
-                        </a>
-                    </div>
+                    <a href="#" className="flex items-center py-2 text-white hover:text-gray-900">
+                        <span className="text-xl font-bold">Fantastic Waffle</span>
+                    </a>
                 </div>
 
                 <div className="hidden md:flex items-center space-x-1">
-                    <NavLink href="#">
-                        Features
+                    <NavLink href="#advantages">
+                        Наши преимущества
+                    </NavLink>
+                    <NavLink href="#about">
+                        О нас
                     </NavLink>
                     <NavLink href="#">
-                        Features
+                        Наша команда
                     </NavLink>
                     <NavLink href="#">
-                        Features
+                        Каталог
                     </NavLink>
                     <NavLink href="#">
-                        Features
+                        <button className="px-8 py-2 bg-secondary text-white rounded-2xl font-bold text-md">
+                            Войти
+                        </button>
                     </NavLink>
                 </div>
 
@@ -49,17 +52,22 @@ const Navbar = () => {
         </div>
 
         <div className={`md:hidden ${navClosed ? "hidden" : ""}`}>
-            <NavLink href="#" mobile>
-                Features
+            <NavLink href="#advantages" mobile>
+                Наши преимущества
+            </NavLink>
+            <NavLink href="#about" mobile>
+                О нас
             </NavLink>
             <NavLink href="#" mobile>
-                Features
+                Наша Команда
             </NavLink>
             <NavLink href="#" mobile>
-                Features
+                Каталог
             </NavLink>
             <NavLink href="#" mobile>
-                Features
+                <button className="px-16 py-2 bg-secondary text-white rounded-2xl font-bold text-md">
+                    Войти
+                </button>
             </NavLink>
         </div>
     </nav>
