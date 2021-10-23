@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
-}
-
 html,
 body {
     padding: 0;
@@ -25,33 +21,6 @@ a {
 
 .background {
     background-image: url("../public/background.png");
-    /* Add the blur effect */
-    /*filter: blur(8px);*/
-    /*-webkit-filter: blur(8px);*/
-
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.background-auth {
-    background-image: url("../public/circle-scatter-haikei.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.bg-text {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 20px;
-    text-align: center;
 }
 
 .spacer {
@@ -73,7 +42,6 @@ a {
     .background {
         background: 20% 20% url("../public/background.png") no-repeat;
     }
-
     .spacer {
         aspect-ratio: 900/600;
     }
