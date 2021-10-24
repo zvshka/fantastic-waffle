@@ -1,9 +1,19 @@
 import Link from "next/link";
+import Button from "./Button";
 
-const NavLink = ({href, children, mobile=false}) => {
+const NavLink = ({href, children, mobile = false, button = false}) => {
     return <Link href={href}>
-        {mobile ? <a className="block py-2 px-4 text-sm text-white flex justify-center bg-primary">{children}</a> :
-            <a className="py-5 px-3 text-white">{children}</a>}
+        {mobile ?
+            <a className={`flex justify-center bg-primary ${button ? "" : "py-2 px-4 text-sm text-white"}`}>
+                {button ?
+                    <Button>{children}</Button> : children
+                }
+            </a> :
+            <a className={`${button ? "" : "py-5 px-3"} text-white`}>
+                {button ?
+                    <Button>{children}</Button> : children
+                }
+            </a>}
     </Link>
 }
 

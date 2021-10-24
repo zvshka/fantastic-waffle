@@ -1,5 +1,6 @@
 import {useState} from "react";
 import NavLink from "./NavLink";
+import Button from "./Button";
 
 const HamburgerSvg = () => <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24"
@@ -35,10 +36,8 @@ const Navbar = () => {
                     <NavLink href="#">
                         Каталог
                     </NavLink>
-                    <NavLink href="#">
-                        <button className="px-8 py-2 bg-secondary text-white rounded-2xl font-bold text-md">
-                            Войти
-                        </button>
+                    <NavLink href="#" button>
+                        Войти
                     </NavLink>
                 </div>
 
@@ -64,10 +63,8 @@ const Navbar = () => {
             <NavLink href="#" mobile>
                 Каталог
             </NavLink>
-            <NavLink href="#" mobile>
-                <button className="px-16 py-2 bg-secondary text-white rounded-2xl font-bold text-md">
-                    Войти
-                </button>
+            <NavLink href="#" mobile button>
+                Войти
             </NavLink>
         </div>
     </nav>
