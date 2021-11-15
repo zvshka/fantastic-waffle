@@ -1,8 +1,16 @@
 import Navbar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
 import warranty from "../public/warranty.png"
+import jsImage from "../public/js.png"
+import csImage from "../public/cs.png"
+import cssImage from "../public/css.png"
+import htmlImage from "../public/html.png"
+import reactImage from "../public/react.png"
+import nextImage from "../public/nextjs.png"
 import AdvantagesCard from "../components/Home/AdvantagesCard";
 import Button from "../components/Home/Button";
+import {TeamCard} from "../components/Home/TeamCard";
+import {LanguageCard} from "../components/Home/LanguageCard";
 
 export default function Home() {
     return (
@@ -21,16 +29,18 @@ export default function Home() {
                     </div>
                 </section>
                 <section id="advantages" className="pt-40 mb-8">
-                    <h2 className="text-center text-4xl font-bold">Наши преимущества</h2>
-                    <div className="flex justify-center gap-8 mt-32">
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                    <div className="max-w-6xl px-4 mx-auto">
+                        <h2 className="text-center text-4xl font-bold">Наши преимущества</h2>
+                        <div className="flex justify-between mt-32">
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        </div>
                     </div>
                 </section>
                 {/*<div className="spacer wave-top"/>*/}
-                <section id="about" className="pt-40 mb-24">
+                <section id="about" className="pt-40 mb-48">
                     {/*<div className="spacer wave-bottom"/>*/}
                     <div className="max-w-6xl px-4 mx-auto">
                         <h2 className="text-center text-4xl font-bold">О нашей комапании</h2>
@@ -79,10 +89,38 @@ export default function Home() {
                     {/*<div className="spacer wave-bottom"/>*/}
                 </section>
                 <section id="team" className="pt-32">
-                    <h2 className="text-center text-4xl font-bold">Наша команда</h2>
+                    <div className="max-w-6xl px-4 mx-auto">
+                        <h2 className="text-center text-4xl font-bold">Наша команда</h2>
+                        <div className="flex items-center justify-between pt-20">
+                            <TeamCard/>
+                            <TeamCard/>
+                            <TeamCard/>
+                        </div>
+                        <div className="flex items-center justify-between pt-20">
+                            <TeamCard/>
+                            <TeamCard/>
+                            <TeamCard/>
+                        </div>
+                    </div>
                 </section>
-                <section id="catalog" className="h-screen">
-
+                <section id="catalog" className="py-32 min-h-screen">
+                    <div className="max-w-6xl px-4 mx-auto">
+                        <h2 className="text-center text-4xl font-bold">Доступные языки и фреймворки</h2>
+                        <div>
+                            <h3 className="text-3xl my-12">Доступные языки</h3>
+                            <div className="flex gap-16">
+                                <LanguageCard text={"C#"} image={csImage}/>
+                                <LanguageCard text={"HTML"} image={htmlImage}/>
+                                <LanguageCard text={"CSS"} image={cssImage}/>
+                                <LanguageCard text={"JS"} image={jsImage}/>
+                            </div>
+                            <h3 className="text-3xl my-12">Доступные фреймворки</h3>
+                            <div className="flex gap-16">
+                                <LanguageCard text={"React JS"} image={reactImage}/>
+                                <LanguageCard text={"Next JS"} image={nextImage}/>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <Footer/>

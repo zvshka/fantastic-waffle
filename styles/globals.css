@@ -26,8 +26,9 @@ a {
 .background {
     background-image: url("../public/background.png");
     /* Add the blur effect */
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    /*filter: blur(8px);*/
+    /*-webkit-filter: blur(8px);*/
+
 
     /* Center and scale the image nicely */
     background-position: center;

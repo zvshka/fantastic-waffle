@@ -3,9 +3,11 @@ import Image from "next/image";
 const AdvantagesCard = ({image, text}) => {
     return (
         <>
-            <div className="bg-primary w-[16rem] flex items-center flex-col p-4 rounded-2xl">
-                <Image src={image} width={160} height={160} alt={""}/>
-                <p className="text-center text-lg text-white">{text}</p>
+            <div className="flex flex-col">
+                <div className="bg-primary flex p-8 rounded-2xl">
+                    <Image src={image} width={200} height={200} alt={""}/>
+                </div>
+                <p className="text-center text-lg">{text}</p>
             </div>
         </>
     )

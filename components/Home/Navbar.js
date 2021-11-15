@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="flex justify-between">
 
                 <div className="flex space-x-4">
-                    <a href="#" className="flex items-center py-2 text-white hover:text-gray-900">
+                    <a href="#" className="flex items-center py-2 text-white">
                         <span className="text-xl font-bold">Fantastic Waffle</span>
                     </a>
                 </div>
