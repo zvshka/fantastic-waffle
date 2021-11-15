@@ -9,7 +9,7 @@ const NavLink = ({href, children, mobile = false, button = false}) => {
                     <Button>{children}</Button> : children
                 }
             </a> :
-            <a className={`${button ? "" : "py-5 px-3"} text-white`}>
+            <a className={`${button ? "py-2" : "py-5 px-3"} text-white`}>
                 {button ?
                     <Button>{children}</Button> : children
                 }

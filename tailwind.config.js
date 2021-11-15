@@ -4,12 +4,13 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   mode: "jit",
   theme: {
-    colors: {
-      primary: "#303952",
-      secondary: "#546de5",
-      white: "#fff"
+    extend: {
+      colors: {
+        primary: "#303952",
+        secondary: "#546de5",
+        white: "#fff"
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},
