@@ -30,10 +30,10 @@ const Navbar = () => {
                     <NavLink href="#about">
                         О нас
                     </NavLink>
-                    <NavLink href="#">
+                    <NavLink href="#team">
                         Наша команда
                     </NavLink>
-                    <NavLink href="#">
+                    <NavLink href="#catalog">
                         Каталог
                     </NavLink>
                     <NavLink href="#" button>

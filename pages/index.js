@@ -11,6 +11,8 @@ export default function Home() {
             <main>
                 <section id="home">
                     <div className="flex items-center justify-center h-full flex-col background h-screen">
+                    </div>
+                    <div className="bg-text">
                         <h2 className="text-3xl font-bold text-white">Fantastic Waffle</h2>
                         <p className="mt-2 text-white">Молодой и амбициозный проект <br/> обучающий программированию</p>
                         <Button className="mt-4">
@@ -18,22 +20,20 @@ export default function Home() {
                         </Button>
                     </div>
                 </section>
-                <section id="advantages" className="flex items-center pt-16 md:pt-24">
-                    <div className="max-w-6xl px-4 mx-auto">
-                        <h2 className="text-3xl text-center">Наши преимущества</h2>
-                        <div className="grid md:grid-rows-1 md:grid-cols-4 grid-rows-4 grid-cols-1 gap-8 mt-8 md:mt-20">
-                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        </div>
+                <section id="advantages" className="pt-40 mb-8">
+                    <h2 className="text-center text-4xl font-bold">Наши преимущества</h2>
+                    <div className="flex justify-center gap-8 mt-32">
+                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
                     </div>
                 </section>
-                <div className="spacer wave-top"/>
-                <section id="about">
-                    <div className="spacer wave-bottom"/>
+                {/*<div className="spacer wave-top"/>*/}
+                <section id="about" className="pt-40 mb-24">
+                    {/*<div className="spacer wave-bottom"/>*/}
                     <div className="max-w-6xl px-4 mx-auto">
-                        <h2 className="text-3xl text-center">О нас</h2>
+                        <h2 className="text-center text-4xl font-bold">О нашей комапании</h2>
                         <br/>
                         <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
@@ -64,7 +64,7 @@ export default function Home() {
                     </div>
                 </section>
                 <section className="bg-primary w-full">
-                    <div className="spacer wave-top"/>
+                    {/*<div className="spacer wave-top"/>*/}
                     <div className="max-w-6xl mx-auto p-4 flex items-center justify-between md:flex-row flex-col">
                         <p className="text-white font-bold text-center mb-3">Подпишись на нашу рассылку <br/> и будь в
                             курсе последних новостей!</p>
@@ -76,10 +76,10 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <div className="spacer wave-bottom"/>
+                    {/*<div className="spacer wave-bottom"/>*/}
                 </section>
-                <section id="team" className="h-screen">
-
+                <section id="team" className="pt-32">
+                    <h2 className="text-center text-4xl font-bold">Наша команда</h2>
                 </section>
                 <section id="catalog" className="h-screen">
 
