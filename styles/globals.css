@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     padding: 0;
@@ -21,6 +25,29 @@ a {
 
 .background {
     background-image: url("../public/background.png");
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text {
+    /*background-color: rgb(0,0,0); !* Fallback color *!*/
+    /*background-color: rgba(0,0,0, 0.4); !* Black w/opacity/see-through *!*/
+    color: white;
+    font-weight: bold;
+    /*border: 3px solid #f1f1f1;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
 }
 
 .spacer {
@@ -42,6 +69,7 @@ a {
     .background {
         background: 20% 20% url("../public/background.png") no-repeat;
     }
+
     .spacer {
         aspect-ratio: 900/600;
     }
