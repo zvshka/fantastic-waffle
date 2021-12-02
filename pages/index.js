@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <Layout>
             <section id="home">
-                <div className="flex items-center justify-center h-full flex-col background h-screen">
+                <div className="flex items-center justify-center flex-col background h-screen">
                 </div>
                 <div className="bg-text">
                     <h2 className="text-4xl font-bold text-white">Fantastic Waffle</h2>
