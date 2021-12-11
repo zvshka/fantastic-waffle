@@ -6,39 +6,7 @@ export const Sidebar = ({children}) => {
         <aside className="flex-shrink-0 hidden w-64 bg-white border-r dark:border-primary dark:bg-darker md:block">
             <div className="flex flex-col h-full">
                 <nav aria-label="Main" className="flex-1 px-2 py-4 space-y-2 overflow-y-hidden hover:overflow-y-auto">
-                    <Dropdown text="Dashboards">
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                    </Dropdown>
-                    <Dropdown text="Dashboards">
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                    </Dropdown>
-                    <Dropdown text="Dashboards">
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                        <SideLink href="#">
-                            Default
-                        </SideLink>
-                    </Dropdown>
+                    {children}
                 </nav>
                 <div className="flex-shrink-0 px-2 py-4 space-y-2">
                     <button
