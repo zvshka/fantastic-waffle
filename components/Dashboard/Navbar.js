@@ -133,7 +133,8 @@ export const Navbar = () => {
                             type="button"
                             aria-haspopup="true"
                             aria-expanded={profileOpen}
-                            onClick={handleOpen}
+                            onFocus={handleOpen}
+                            onBlur={handleOpen}
                             className="transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
                         >
                             <span className="sr-only">User menu</span>
