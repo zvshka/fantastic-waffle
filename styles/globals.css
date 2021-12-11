@@ -36,6 +36,13 @@ a {
     background-size: cover;
 }
 
+.background-auth {
+    background-image: url("../public/circle-scatter-haikei.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-text {
     color: white;
     position: absolute;
