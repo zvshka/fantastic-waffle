@@ -1,5 +1,5 @@
-import {Layout} from "../components/Home/Layout";
-import {useState} from "react";
+import {Layout} from "../../components/Home/Layout";
+import Link from "next/link";
 
 const EmailSign = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -17,48 +17,24 @@ const PasswordSign = () => {
     </svg>
 }
 
-const UserSign = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
-    </svg>
-}
-
 export default function Auth() {
-    const [isLogin, setIsLogin] = useState(true)
-    const handleChange = (e) => {
-        e.preventDefault()
-        setIsLogin(!isLogin)
-    }
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(e.target.v)
     }
     return (
         <Layout>
-            <div className="h-screen flex items-center justify-center pt-16">
+            <div className="h-screen flex items-center justify-center pt-16 background-auth">
                 <div
                     className="flex flex-col bg-primary shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
                     <div className="font-medium self-center text-xl sm:text-3xl text-white">
                         Добро пожаловать!
                     </div>
                     <div className="mt-4 self-center text-xl sm:text-sm text-white">
-                        {isLogin ? "Введите свои данные для доступа к сайту" : "Введите данные для регистрации"}
+                        Введите свои данные для доступа к сайту
                     </div>
                     <div className="mt-10">
                         <form onSubmit={handleSubmit}>
-                            {isLogin ? "" : <div className="flex flex-col mb-5">
-                                <label htmlFor="email" className="mb-1 text-xs tracking-wide text-white">Имя
-                                    пользователя:</label>
-                                <div className="relative">
-                                    <div
-                                        className="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                                        <UserSign/>
-                                    </div>
-                                    <input id="username" type="username" name="username"
-                                           className="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 "
-                                           placeholder="Введите ваше имя пользователя"/>
-                                </div>
-                            </div>}
                             <div className="flex flex-col mb-5">
                                 <label htmlFor="email" className="mb-1 text-xs tracking-wide text-white">Почта:</label>
                                 <div className="relative">
@@ -90,7 +66,7 @@ export default function Auth() {
                                     type="submit"
                                     className="flex mt-2 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-secondary hover:bg-blue-600 rounded-2xl py-2 w-full transition duration-150 ease-in"
                                 >
-                                    <span className="mr-2 uppercase">{isLogin ? "Войти" : "Регистрация"}</span>
+                                    <span className="mr-2 uppercase">{"Войти"}</span>
                                     <span>
                                           <svg
                                               className="h-6 w-6"
@@ -115,9 +91,10 @@ export default function Auth() {
                                 target="_blank"
                                 className="inline-flex items-center text-white font-medium text-xs text-center"
                             >
-                                <span className="ml-2">{isLogin ? "Нет аккаунта?" : "Уже есть аккаунт?"}
-                                    <a onClick={handleChange}
-                                       className="text-xs ml-2 text-blue-500 font-semibold">{isLogin ? "Регистрация" : "Войти"}</a>
+                                <span className="ml-2">{"Нет аккаунта?"}
+                                    <Link href="/auth/register">
+                                        <a className="text-xs ml-2 text-blue-500 font-semibold">{"Регистрация"}</a>
+                                    </Link>
                                 </span>
                             </a>
                         </div>
