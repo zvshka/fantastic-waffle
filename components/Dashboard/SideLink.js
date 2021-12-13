@@ -1,4 +1,4 @@
-export const SideLink = ({children, href}) => {
+export const SideLinkDropdown = ({children, href}) => {
     return <a
         href={href}
         role="menuitem"
@@ -7,5 +7,17 @@ export const SideLink = ({children, href}) => {
          dark:hover:text-light hover:text-gray-800"
     >
         {children}
+    </a>
+}
+export const SideLink = ({children, icon, href}) => {
+    return <a
+        href={href}
+        className="flex items-center p-2 transition-colors
+            rounded-md dark:text-light hover:bg-secondary hover:text-white dark:hover:bg-blue-600"
+        role="button"
+        aria-haspopup="true"
+    >
+        <span aria-hidden="true">{icon}</span>
+        <span className="ml-2 text-sm"> {children} </span>
     </a>
 }

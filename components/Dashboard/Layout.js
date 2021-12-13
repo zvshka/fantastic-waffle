@@ -1,43 +1,38 @@
 import {Sidebar} from "./Sidebar";
 import {Navbar} from "./Navbar";
 import {Dropdown} from "./Dropdown";
-import {SideLink} from "./SideLink";
+import {SideLink, SideLinkDropdown} from "./SideLink";
 
 const Urls = () => {
     return (
         <>
-            <Dropdown text="Dashboards">
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
+            <SideLink>
+                Главная
+            </SideLink>
+            <SideLink>
+                Мои курсы
+            </SideLink>
+            <SideLink>
+                Чат
+            </SideLink>
+            <Dropdown text="Админ">
+                <SideLinkDropdown href="#">
+                    Таблица пользователей
+                </SideLinkDropdown>
+                <SideLinkDropdown href="#">
+                    Таблица курсов
+                </SideLinkDropdown>
+                <SideLinkDropdown href="#">
+                    Таблица задач
+                </SideLinkDropdown>
             </Dropdown>
-            <Dropdown text="Dashboards">
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
-            </Dropdown>
-            <Dropdown text="Dashboards">
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
-                <SideLink href="#">
-                    Default
-                </SideLink>
+            <Dropdown text="Авторизация">
+                <SideLinkDropdown href="#">
+                    Сменить пароль
+                </SideLinkDropdown>
+                <SideLinkDropdown href="#">
+                    Выйти
+                </SideLinkDropdown>
             </Dropdown>
         </>
     )
