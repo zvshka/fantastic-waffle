@@ -13,6 +13,9 @@ const Urls = () => {
                 Мои курсы
             </SideLink>
             <SideLink>
+                Мои задачи
+            </SideLink>
+            <SideLink>
                 Чат
             </SideLink>
             <Dropdown text="Админ">
@@ -40,14 +43,18 @@ const Urls = () => {
 
 export const Layout = ({children}) => {
     return (
-        <main className="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
+        <div className="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
             <Sidebar>
                 <Urls/>
             </Sidebar>
-            <Navbar>
-                <Urls/>
-            </Navbar>
-            {children}
-        </main>
+            <div className="flex-1 h-full overflow-x-hidden overflow-y-auto">
+                <Navbar>
+                    <Urls/>
+                </Navbar>
+                <main>
+                    {children}
+                </main>
+            </div>
+        </div>
     )
 }
