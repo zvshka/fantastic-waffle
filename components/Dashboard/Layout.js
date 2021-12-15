@@ -20,9 +20,6 @@ const Urls = () => {
             </SideLink>
             <Dropdown text="Админ">
                 <SideLinkDropdown href="#">
-                    Таблица пользователей
-                </SideLinkDropdown>
-                <SideLinkDropdown href="#">
                     Таблица курсов
                 </SideLinkDropdown>
                 <SideLinkDropdown href="#">
