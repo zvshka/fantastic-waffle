@@ -70,7 +70,7 @@ export const Navbar = ({children}) => {
                     </span>
                 </button>
 
-                <nav aria-label="Secondary" className="hidden space-x-2 lg:flex md:items-center">
+                <nav aria-label="Secondary" className="hidden space-x-2 lg:flex md:items-center z-50">
                     <Submenu/>
                     <User/>
                 </nav>

@@ -6,13 +6,13 @@ import {SideLink, SideLinkDropdown} from "./SideLink";
 const Links = () => {
     return (
         <>
-            <SideLink>
+            <SideLink href="/dashboard">
                 Доступные курсы
             </SideLink>
-            <SideLink>
+            <SideLink href="/dashboard/courses">
                 Мои курсы
             </SideLink>
-            <SideLink>
+            <SideLink href="/dashboard/challenges">
                 Мои задачи
             </SideLink>
             <SideLink>
