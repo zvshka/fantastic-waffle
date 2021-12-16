@@ -1,6 +1,6 @@
 export const Sidebar = ({children}) => {
     return (
-        <aside className="flex-shrink-0 hidden w-64 bg-white border-r dark:border-primary dark:bg-darker md:block">
+        <aside className="flex-shrink-0 hidden w-64 bg-white border-r dark:border-primary dark:bg-darker lg:block">
             <div className="flex flex-col h-full">
                 <nav aria-label="Main" className="flex-1 px-2 py-4 space-y-2 overflow-y-hidden hover:overflow-y-auto">
                     {children}
