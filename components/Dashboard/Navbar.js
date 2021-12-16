@@ -23,7 +23,7 @@ export const Navbar = ({children}) => {
                     className="p-1 text-secondary transition-colors duration-200
                     rounded-md bg-blue-50 hover:text-blue-600 hover:bg-blue-100
                     dark:hover:text-light dark:hover:bg-blue-700 dark:bg-dark
-                    md:hidden focus:outline-none focus:ring"
+                    lg:hidden focus:outline-none focus:ring"
                 >
                     <span className="sr-only">Open main menu</span>
                     <span aria-hidden="true">
@@ -49,7 +49,7 @@ export const Navbar = ({children}) => {
                     onClick={handleSubOpen}
                     className="p-1 text-secondary transition-colors duration-200 rounded-md bg-blue-50
                     hover:text-blue-600 hover:bg-blue-100 dark:hover:text-light dark:hover:bg-blue-700
-                    dark:bg-dark md:hidden focus:outline-none focus:ring"
+                    dark:bg-dark lg:hidden focus:outline-none focus:ring"
                 >
                     <span className="sr-only">Open sub menu</span>
                     <span aria-hidden="true">
@@ -70,14 +70,14 @@ export const Navbar = ({children}) => {
                     </span>
                 </button>
 
-                <nav aria-label="Secondary" className="hidden space-x-2 md:flex md:items-center">
+                <nav aria-label="Secondary" className="hidden space-x-2 lg:flex md:items-center">
                     <Submenu/>
                     <User/>
                 </nav>
                 {submenuOpen &&
                     <nav
                         className={`absolute flex items-center p-4 bg-white 
-                        rounded-md shadow-lg dark:bg-darker top-16 inset-x-4 md:hidden`}
+                        rounded-md shadow-lg dark:bg-darker top-16 inset-x-4 lg:hidden`}
                         aria-label="Secondary"
                     >
                         <div className="space-x-2">
@@ -87,7 +87,7 @@ export const Navbar = ({children}) => {
                     </nav>
                 }
             </div>
-            {mainOpen && <div className={`border-b md:hidden dark:border-primary-darker`}>
+            {mainOpen && <div className={`border-b lg:hidden dark:border-primary-darker`}>
                 <nav aria-label="Main" className="px-2 py-4 space-y-2">
                     {children}
                 </nav>

@@ -11,7 +11,7 @@ export const User = () => {
         dispatch(toggleUser())
     }
 
-    return <div className="relative flex items-center ml-auto md:ml-0">
+    return <div className="relative flex items-center ml-auto lg:ml-0">
         <button
             type="button"
             aria-haspopup="true"

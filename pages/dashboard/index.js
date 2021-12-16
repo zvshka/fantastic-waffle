@@ -38,7 +38,7 @@ export default function Dashboard() {
         <div className="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
             <h1 className="text-2xl font-semibold">Список доступных курсов</h1>
         </div>
-        <div className="p-4 grid md:gap-y-4 md:grid-cols-2">
+        <div className="p-8 grid gap-y-4 gap-x-4 xl:grid-cols-2">
             {courses.map((c, i) => <Card key={i}/>)}
         </div>
     </Layout>
