@@ -37,9 +37,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            {/*<div className="spacer wave-top"/>*/}
             <section id="about" className="pt-40 mb-48">
-                {/*<div className="spacer wave-bottom"/>*/}
                 <div className="max-w-6xl px-4 mx-auto">
                     <h2 className="text-center text-4xl font-bold">О нашей комапании</h2>
                     <br/>
@@ -72,30 +70,23 @@ export default function Home() {
                 </div>
             </section>
             <section className="bg-primary w-full">
-                {/*<div className="spacer wave-top"/>*/}
                 <div className="max-w-6xl mx-auto p-4 flex items-center justify-between md:flex-row flex-col">
                     <p className="text-white font-bold text-center mb-3">Подпишись на нашу рассылку <br/> и будь в
                         курсе последних новостей!</p>
                     <div className="grid md:grid-cols-3 gap-4">
                         <input type="text"/>
                         <input type="text"/>
-                        {/*<button className="px-4 py-2 bg-secondary text-white rounded-2xl font-bold text-md">*/}
-                        {/*    Подписаться*/}
-                        {/*</button>*/}
                         <Button>Подпписаться</Button>
                     </div>
                 </div>
-                {/*<div className="spacer wave-bottom"/>*/}
             </section>
-            <section id="team" className="pt-32">
-                <div className="max-w-6xl px-4 mx-auto">
+            <section id="team" className="pt-28">
+                <div className="max-w-6xl px-4 mx-auto space-y-4">
                     <h2 className="text-center text-4xl font-bold">Наша команда</h2>
-                    <div className="flex items-center justify-between pt-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <TeamCard/>
                         <TeamCard/>
                         <TeamCard/>
-                    </div>
-                    <div className="flex items-center justify-between pt-20">
                         <TeamCard/>
                         <TeamCard/>
                         <TeamCard/>
