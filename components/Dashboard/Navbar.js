@@ -77,7 +77,7 @@ export const Navbar = ({children}) => {
                 {submenuOpen &&
                     <nav
                         className={`absolute flex items-center p-4 bg-white 
-                        rounded-md shadow-lg dark:bg-darker top-16 inset-x-4 lg:hidden`}
+                        rounded-md shadow-lg dark:bg-darker top-16 inset-x-4 lg:hidden z-50`}
                         aria-label="Secondary"
                     >
                         <div className="space-x-2">
