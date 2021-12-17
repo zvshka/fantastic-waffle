@@ -71,12 +71,9 @@ export default function Courses() {
         },
     ]
 
-    return <Layout>
-        <div className="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
-            <h1 className="text-2xl font-semibold">Список доступных курсов</h1>
-        </div>
+    return <Layout title="Мои курсы">
         <div className="flex justify-center">
-            <div className="p-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {courses.map((c, i) => <CourseCard key={i} course={c} progress={true}/>)}
             </div>
         </div>

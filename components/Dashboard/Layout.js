@@ -19,13 +19,13 @@ const Links = () => {
                 Чат
             </SideLink>
             <Dropdown text="Админ">
-                <SideLinkDropdown href="/dashboard/courses">
+                <SideLinkDropdown href="/dashboard/admin/courses">
                     Таблица курсов
                 </SideLinkDropdown>
                 <SideLinkDropdown href="/dashboard/courses/create">
                     Создать курс
                 </SideLinkDropdown>
-                <SideLinkDropdown href="/dashboard/challenges">
+                <SideLinkDropdown href="/dashboard/admin/challenges">
                     Таблица задач
                 </SideLinkDropdown>
                 <SideLinkDropdown href="/dashboard/challenges/create">
@@ -33,10 +33,7 @@ const Links = () => {
                 </SideLinkDropdown>
             </Dropdown>
             <Dropdown text="Авторизация">
-                <SideLinkDropdown href="#">
-                    Сменить пароль
-                </SideLinkDropdown>
-                <SideLinkDropdown href="#">
+                <SideLinkDropdown onClick={e => 1}>
                     Выйти
                 </SideLinkDropdown>
             </Dropdown>
@@ -44,7 +41,7 @@ const Links = () => {
     )
 }
 
-export const Layout = ({children}) => {
+export const Layout = ({children, title}) => {
     return (
         <div className="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
             <Sidebar>
@@ -55,7 +52,12 @@ export const Layout = ({children}) => {
                     <Links/>
                 </Navbar>
                 <main>
-                    {children}
+                    <div className="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
+                        <h1 className="text-2xl font-semibold">{title}</h1>
+                    </div>
+                    <div className="p-8">
+                        {children}
+                    </div>
                 </main>
             </div>
         </div>

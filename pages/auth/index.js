@@ -18,9 +18,13 @@ const PasswordSign = () => {
 }
 
 export default function Auth() {
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(e.target.v)
+        console.log(e)
+        // const res = await fetch("http://localhost:3000/api/login", {
+        //     method: "POST",
+        //     body: JSON.stringify()
+        // }).then(res => res.json())
     }
     return (
         <Layout>
