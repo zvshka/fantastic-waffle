@@ -1,6 +1,6 @@
 import {Badge} from "./Badge";
 
-export const Card = ({course, progress = false}) => {
+export const CourseCard = ({course, progress = false}) => {
     return (
         <div className="overflow-hidden shadow-lg transition
             duration-500 ease-in-out transform hover:-translate-y-2
@@ -36,7 +36,7 @@ export const Card = ({course, progress = false}) => {
                     </div>
                     {progress && <div className="flex flex-col my-2">
                         <div className="text-xs mb-2">
-                            5/12 Task Completed
+                            5/12 Выполнено
                         </div>
                         <div className="w-full bg-gray-400 p-0">
                             <div className="w-5/12 bg-secondary h-1"/>

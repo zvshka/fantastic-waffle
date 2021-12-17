@@ -1,8 +1,7 @@
-import {Card} from "../../../components/Dashboard/Card";
+import {CourseCard} from "../../../components/Dashboard/CourseCard";
 import {Layout} from "../../../components/Dashboard/Layout";
 
 export default function Courses() {
-
     const courses = [
         {
             name: "Node js часть 1",
@@ -78,7 +77,7 @@ export default function Courses() {
         </div>
         <div className="flex justify-center">
             <div className="p-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {courses.map((c, i) => <Card key={i} course={c} progress={true}/>)}
+                {courses.map((c, i) => <CourseCard key={i} course={c} progress={true}/>)}
             </div>
         </div>
     </Layout>

@@ -1,5 +1,5 @@
 import {Layout} from "../../components/Dashboard/Layout";
-import {Card} from "../../components/Dashboard/Card";
+import {CourseCard} from "../../components/Dashboard/CourseCard";
 
 export default function Dashboard() {
 
@@ -78,7 +78,7 @@ export default function Dashboard() {
         </div>
         <div className="flex justify-center">
             <div className="p-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {courses.map((c, i) => <Card key={i} course={c}/>)}
+                {courses.map((c, i) => <CourseCard key={i} course={c}/>)}
             </div>
         </div>
     </Layout>
