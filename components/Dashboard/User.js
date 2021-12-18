@@ -1,11 +1,12 @@
 import {useAppDispatch, useAppSelector} from "../../lib/hooks";
 import {selectUserPanel, toggleUser} from "../../features/submenusSlice";
+import {selectUser} from "../../features/authSlice";
 
 export const User = () => {
 
     const dispatch = useAppDispatch();
     const userPanel = useAppSelector(selectUserPanel)
-
+    const user = useAppSelector(selectUser)
     const handleChange = (e) => {
         e.preventDefault()
         dispatch(toggleUser())
@@ -21,9 +22,13 @@ export const User = () => {
             className="transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
         >
             <span className="sr-only">User menu</span>
-            <img className="w-10 h-10 rounded-full"
-                 src="https://cdn.discordapp.com/avatars/263349725099458566/b5b18f501c40f7ba6c8bc5f4085ab221.png?size=128"
-                 alt="Ahmed Kamel"/>
+            {
+                user.avatar && user.avatar.length > 0 ?
+                    <img className="w-10 h-10 rounded-full"
+                         src={user.avatar}/> :
+                    <img className="w-10 h-10 rounded-full"
+                         src="https://www.iconninja.com/files/294/576/852/users-user-icon.png"/>
+            }
         </button>
         <div
             className={`absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5
