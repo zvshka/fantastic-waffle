@@ -1,5 +1,9 @@
 import {Layout} from "../../components/Home/Layout";
 import Link from "next/link";
+import {useAppDispatch, useAppSelector} from "../../lib/hooks";
+import {login} from "../../features/authSlice";
+import {useState} from "react";
+import {useRouter} from "next/router";
 
 const EmailSign = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -18,13 +22,16 @@ const PasswordSign = () => {
 }
 
 export default function Auth() {
+    const router = useRouter()
+    const dispatch = useAppDispatch()
+    const [email, setEmail] = useState("")
+
+    const handleChangeEmail = (e) => setEmail(e.target.value)
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(e)
-        // const res = await fetch("http://localhost:3000/api/login", {
-        //     method: "POST",
-        //     body: JSON.stringify()
-        // }).then(res => res.json())
+        dispatch(login({email}))
+        // TODO Fetch + dispatch
+        await router.push("/dashboard")
     }
     return (
         <Layout>
@@ -38,7 +45,7 @@ export default function Auth() {
                         Введите свои данные для доступа к сайту
                     </div>
                     <div className="mt-10">
-                        <form onSubmit={handleSubmit}>
+                        <form encType="application/json" onSubmit={handleSubmit}>
                             <div className="flex flex-col mb-5">
                                 <label htmlFor="email" className="mb-1 text-xs tracking-wide text-white">Почта:</label>
                                 <div className="relative">
@@ -46,7 +53,7 @@ export default function Auth() {
                                         className="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
                                         <EmailSign/>
                                     </div>
-                                    <input id="email" type="email" name="email"
+                                    <input id="email" type="email" name="email" onChange={handleChangeEmail}
                                            className="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 "
                                            placeholder="Введите ваш Email"/>
                                 </div>

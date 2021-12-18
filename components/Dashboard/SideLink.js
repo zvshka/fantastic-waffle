@@ -1,8 +1,9 @@
 import Link from "next/link";
-export const SideLinkDropdown = ({children, href}) => {
+export const SideLinkDropdown = ({children, href, onClick}) => {
     return <Link href={href ? href : "/dashboard"}>
         <a
             role="menuitem"
+            onClick={onClick}
             className="block p-2 text-sm text-gray-500 transition-colors
          duration-200 rounded-md dark:text-gray-400
          dark:hover:text-light hover:text-gray-800"
