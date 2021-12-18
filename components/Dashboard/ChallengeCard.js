@@ -44,18 +44,18 @@ export const ChallengeCard = () => {
                             <Badge text={"NODE.JS"}/>
                         </div>
 
-                        <div className="col-none hidden mr-2 lg:block lg:col-start-9 lg:col-end-12">
-                            <a href="#" className="flex items-center">
-                                <img
-                                    src="https://cdn.discordapp.com/avatars/263349725099458566/b5b18f501c40f7ba6c8bc5f4085ab221.png?size=128"
-                                    alt="avatar"
-                                    className="mr-2 w-8 h-8 rounded-full"/>
+                        {/*<div className="col-none hidden mr-2 lg:block lg:col-start-9 lg:col-end-12">*/}
+                        {/*    <a href="#" className="flex items-center">*/}
+                        {/*        <img*/}
+                        {/*            src="https://cdn.discordapp.com/avatars/263349725099458566/b5b18f501c40f7ba6c8bc5f4085ab221.png?size=128"*/}
+                        {/*            alt="avatar"*/}
+                        {/*            className="mr-2 w-8 h-8 rounded-full"/>*/}
 
-                                <div className="text-gray-600 font-bold text-sm">
-                                    Andrey Pushpurs
-                                </div>
-                            </a>
-                        </div>
+                        {/*        <div className="text-gray-600 font-bold text-sm">*/}
+                        {/*            Andrey Pushpurs*/}
+                        {/*        </div>*/}
+                        {/*    </a>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>

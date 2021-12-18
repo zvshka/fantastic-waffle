@@ -8,13 +8,13 @@ export const CourseCard = ({course, progress = false}) => {
             <a href="#" className="w-full block h-full">
                 <div className="bg-white w-full p-4">
                     <p className="text-secondary text-2xl font-medium">
-                        {course.name}
+                        {course.title}
                     </p>
                     <p className="text-gray-800 text-sm font-medium mb-2">
-                        {course.description}
+                        {course.subtitle}
                     </p>
                     <p className="text-gray-600 font-light text-md">
-                        {course.text}
+                        {course.description}
                         {/*<a className="inline-flex text-secondary" href="#">Просмотреть...</a>*/}
                     </p>
                     <div className="flex flex-wrap justify-starts
@@ -27,7 +27,7 @@ export const CourseCard = ({course, progress = false}) => {
 
                         <div className="pl-3">
                             <div className="font-medium">
-                                {course.author.name}
+                                {course.author.firstName} {course.author.lastName}
                             </div>
                             <div className="text-gray-600 text-sm">
                                 {course.author.position}
