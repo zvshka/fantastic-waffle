@@ -23,6 +23,18 @@ a {
     box-sizing: border-box;
 }
 
+.close-and-heavy-text-shadow {
+    text-shadow: 0 4px 3px rgba(0, 0, 0, .4),
+    0 8px 13px rgba(0, 0, 0, .1),
+    0 18px 23px rgba(0, 0, 0, .1);
+}
+
+.super-hero-text-shadow {
+    text-shadow: -10px 10px 0px #758bef,
+    -20px 20px 0px #546de5,
+    -30px 30px 0px #2c43ba;
+}
+
 .background {
     background-image: url("../public/background.png");
     /* Add the blur effect */

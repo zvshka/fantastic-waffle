@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import {Provider} from "react-redux";
 import {store} from "../lib/store";
+import {motion} from "framer-motion";
 
 function MyApp({Component, pageProps}) {
     return <Provider store={store}>

@@ -1,8 +1,11 @@
 import {Sidebar} from "./Sidebar";
 import {Navbar} from "./Navbar";
 import {Links} from "./Links";
+import {motion} from "framer-motion";
+import {useRouter} from "next/router";
 
 export const Layout = ({children, title}) => {
+    const router = useRouter()
     return (
         <div className="flex h-screen antialiased text-gray-900 bg-gray-100 dark:bg-dark dark:text-light">
             <Sidebar>
@@ -18,10 +21,20 @@ export const Layout = ({children, title}) => {
                         <h1 className="text-2xl font-semibold">{title}</h1>
                     </div>
                     <div className="p-8">
-                        {children}
+                        <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+                            pageInitial: {
+                                opacity: 0
+                            },
+                            pageAnimate: {
+                                opacity: 1
+                            },
+                        }}>
+                            {children}
+                        </motion.div>
                     </div>
                 </main>
             </div>
         </div>
+
     )
 }

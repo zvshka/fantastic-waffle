@@ -19,7 +19,7 @@ export default function Home() {
                 <div className="flex items-center justify-center flex-col background h-screen">
                 </div>
                 <div className="bg-text">
-                    <h2 className="text-4xl font-bold text-white">Fantastic Waffle</h2>
+                    <h2 className="text-4xl font-bold text-white close-and-heavy-text-shadow">Fantastic Waffle</h2>
                     <p className="mt-2 text-2xl text-white">Молодой и амбициозный проект <br/> обучающий программированию</p>
                     <NavLink href="#advantages" button className="mt-4">
                         Узнать больше

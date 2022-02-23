@@ -9,7 +9,7 @@ const Navbar = () => {
 
                 <div className="flex space-x-4">
                     <Link href="/#" passHref>
-                        <span className="text-xl font-bold flex items-center py-2 text-white">Fantastic Waffle</span>
+                        <span className="text-2xl font-bold flex items-center py-2 text-white close-and-heavy-text-shadow">Fantastic Waffle</span>
                     </Link>
                 </div>
 

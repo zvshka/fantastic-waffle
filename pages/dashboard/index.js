@@ -1,6 +1,8 @@
 import {Layout} from "../../components/Dashboard/Layout";
 import {CourseCard} from "../../components/Dashboard/CourseCard";
 import {useEffect, useState} from "react";
+import {FadeInUpBox} from "../../components/Dashboard/FadeInBox";
+import {StaggerWrap} from "../../components/Dashboard/StaggerWrap";
 
 export default function Dashboard() {
     const [courses, setCourses] = useState([])
@@ -25,9 +27,15 @@ export default function Dashboard() {
 
     return <Layout title={"Список доступных курсов"}>
         <div className="flex justify-center">
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {courses.map((c, i) => <CourseCard key={i} course={c}/>)}
-            </div>
+            <StaggerWrap>
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {courses.map((c, i) => (
+                        <FadeInUpBox key={i}>
+                            <CourseCard course={c}/>
+                        </FadeInUpBox>
+                    ))}
+                </div>
+            </StaggerWrap>
         </div>
     </Layout>
 }
