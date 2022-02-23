@@ -1,14 +1,14 @@
 import {Layout} from "../../components/Dashboard/Layout";
 import {CourseCard} from "../../components/Dashboard/CourseCard";
 import {useEffect, useState} from "react";
-import {FadeInUpBox} from "../../components/Dashboard/FadeInBox";
+import {FadeInBox} from "../../components/Dashboard/FadeInBox";
 import {StaggerWrap} from "../../components/Dashboard/StaggerWrap";
 
 export default function Dashboard() {
     const [courses, setCourses] = useState([])
     useEffect(() => {
         const newCourses = []
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 12; i++) {
             newCourses.push({
                 title: "Node js часть 1",
                 subtitle: "Познаем озы Node.js",
@@ -25,17 +25,16 @@ export default function Dashboard() {
         setCourses(newCourses)
     }, [])
 
+    console.log(courses)
     return <Layout title={"Список доступных курсов"}>
         <div className="flex justify-center">
-            <StaggerWrap>
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    {courses.map((c, i) => (
-                        <FadeInUpBox key={i}>
-                            <CourseCard course={c}/>
-                        </FadeInUpBox>
-                    ))}
-                </div>
-            </StaggerWrap>
+            {courses.length > 0 && <StaggerWrap className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {courses.map((c, i) => (
+                    <FadeInBox key={i}>
+                        <CourseCard course={c}/>
+                    </FadeInBox>
+                ))}
+            </StaggerWrap>}
         </div>
     </Layout>
 }
