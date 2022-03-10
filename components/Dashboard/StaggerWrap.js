@@ -36,7 +36,6 @@ export const StaggerWrap = ({
             <motion.div
                 initial="hidden"
                 animate={inView ? "show" : "hidden"}
-                // animate={"show"}
                 exit="hidden"
                 variants={variants}
                 {...rest}

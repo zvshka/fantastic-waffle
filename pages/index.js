@@ -11,12 +11,14 @@ import {TeamCard} from "../components/Home/TeamCard";
 import {LanguageCard} from "../components/Home/LanguageCard";
 import {Layout} from "../components/Home/Layout";
 import NavLink from "../components/Home/NavLink";
+import {StaggerWrap} from "../components/Dashboard/StaggerWrap";
+import {FadeInBox} from "../components/Dashboard/FadeInBox";
 
 export default function Home() {
     return (
         <Layout>
             <section id="home">
-                <div className="flex items-center justify-center flex-col background h-screen">
+                <div className="flex items-center justify-center flex-col background min-h-screen">
                 </div>
                 <div className="bg-text">
                     <h2 className="text-4xl font-bold text-white close-and-heavy-text-shadow">Fantastic Waffle</h2>
@@ -29,12 +31,24 @@ export default function Home() {
             <section id="advantages" className="pt-40 mb-8">
                 <div className="max-w-6xl px-4 mx-auto">
                     <h2 className="text-center text-4xl font-bold">Наши преимущества</h2>
-                    <div className="flex justify-between mt-32">
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                        <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
-                    </div>
+                    <StaggerWrap
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.5 }}
+                        animate={""}
+                        className="flex justify-between mt-32">
+                        <FadeInBox>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <AdvantagesCard text={"Гарантия качества"} image={warranty}/>
+                        </FadeInBox>
+                    </StaggerWrap>
                 </div>
             </section>
             <section id="about" className="pt-40 mb-48">
@@ -83,14 +97,30 @@ export default function Home() {
             <section id="team" className="pt-28">
                 <div className="max-w-6xl px-4 mx-auto space-y-4">
                     <h2 className="text-center text-4xl font-bold">Наша команда</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <TeamCard/>
-                        <TeamCard/>
-                        <TeamCard/>
-                        <TeamCard/>
-                        <TeamCard/>
-                        <TeamCard/>
-                    </div>
+                    <StaggerWrap
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.5 }}
+                        animate={""}
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                        <FadeInBox>
+                            <TeamCard/>
+                        </FadeInBox>
+                    </StaggerWrap>
                 </div>
             </section>
             <section id="catalog" className="py-32 min-h-screen">
@@ -98,17 +128,37 @@ export default function Home() {
                     <h2 className="text-center text-4xl font-bold">Доступные языки и фреймворки</h2>
                     <div>
                         <h3 className="text-3xl my-12">Доступные языки</h3>
-                        <div className="flex gap-16">
-                            <LanguageCard text={"C#"} image={csImage}/>
-                            <LanguageCard text={"HTML"} image={htmlImage}/>
-                            <LanguageCard text={"CSS"} image={cssImage}/>
-                            <LanguageCard text={"JS"} image={jsImage}/>
-                        </div>
+                        <StaggerWrap
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.5 }}
+                            animate={""}
+                            className="flex gap-16">
+                            <FadeInBox>
+                                <LanguageCard text={"C#"} image={csImage}/>
+                            </FadeInBox>
+                            <FadeInBox>
+                                <LanguageCard text={"HTML"} image={htmlImage}/>
+                            </FadeInBox>
+                            <FadeInBox>
+                                <LanguageCard text={"CSS"} image={cssImage}/>
+                            </FadeInBox>
+                            <FadeInBox>
+                                <LanguageCard text={"JS"} image={jsImage}/>
+                            </FadeInBox>
+                        </StaggerWrap>
                         <h3 className="text-3xl my-12">Доступные фреймворки</h3>
-                        <div className="flex gap-16">
-                            <LanguageCard text={"React JS"} image={reactImage}/>
-                            <LanguageCard text={"Next JS"} image={nextImage}/>
-                        </div>
+                        <StaggerWrap
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.5 }}
+                            animate={""}
+                            className="flex gap-16">
+                            <FadeInBox>
+                                <LanguageCard text={"React JS"} image={reactImage}/>
+                            </FadeInBox>
+                            <FadeInBox>
+                                <LanguageCard text={"Next JS"} image={nextImage}/>
+                            </FadeInBox>
+                        </StaggerWrap>
                     </div>
                 </div>
             </section>
